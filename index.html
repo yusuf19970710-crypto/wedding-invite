@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Приглашение на свадьбу</title>
+  <meta name="description" content="Свадебное приглашение. Подтвердите присутствие в один клик." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <meta name="theme-color" content="#1b2b4b">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- Preload backgrounds to reduce flash on refresh -->
+  <link rel="preload" as="image" href="./assets/Roses-desktop.png" media="(min-width: 981px)">
+  <link rel="preload" as="image" href="./assets/Roses.png" media="(max-width: 980px)">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="bg-roses" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Наверх">
+        <span class="brand__mark"></span>
+        <span class="brand__text">Приглашение</span>
+      </a>
+
+      <nav class="nav" aria-label="Навигация">
+        <a href="#invite">Текст</a>
+        <a href="#details">Детали</a>
+        <a href="#location">Локация</a>
+      </nav>
+
+      <a class="btn btn--small btn--primary" id="rsvpTop" href="#">Ответить</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__card">
+          <div class="hero__orn hero__orn--top"></div>
+
+          <div class="hero__kicker">С любовью и радостью</div>
+          <h1 class="hero__title">Приглашаем вас</h1>
+
+          <p class="hero__subtitle">
+            Мы очень ждём вас на нашем свадебном торжестве.
+            Давайте вместе сделаем этот день тёплым и незабываемым.
+          </p>
+
+          <div class="hero__divider" aria-hidden="true">
+            <span class="hero__line"></span>
+            <span class="hero__dot"></span>
+            <span class="hero__line"></span>
+          </div>
+
+          <div class="hero__big">
+            <div class="hero__bigLabel">Ждём вас на нашем</div>
+            <div class="hero__bigScript">Свадебном торжестве</div>
+          </div>
+
+          <div class="hero__dateRow">
+            <div class="hero__dateBox">
+              <div class="hero__dateTop">8 мая</div>
+              <div class="hero__dateYear">2026</div>
+              <div class="hero__dateBottom">года в <b>16:00</b></div>
+            </div>
+
+            <div class="hero__place">
+              <div class="hero__placeLine">
+                <span class="pin" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22s7-4.6 7-12a7 7 0 10-14 0c0 7.4 7 12 7 12z" stroke="currentColor" stroke-width="1.8"/>
+                    <circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.8"/>
+                  </svg>
+                </span>
+                г. Токмок
+              </div>
+              <div class="hero__placeLine">Ресторан «Караван-Сарай»</div>
+              <div class="hero__placeLine">ул. Береговая, 3А</div>
+            </div>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" id="rsvpHero" href="#">Ответить в WhatsApp</a>
+            <a class="btn btn--ghost" href="#invite">Читать текст</a>
+          </div>
+
+          <div class="countdown" aria-label="Обратный отсчет">
+            <div class="countdown__item">
+              <div class="countdown__num" id="cdDays">—</div>
+              <div class="countdown__label">дней</div>
+            </div>
+            <div class="countdown__item">
+              <div class="countdown__num" id="cdHours">—</div>
+              <div class="countdown__label">часов</div>
+            </div>
+            <div class="countdown__item">
+              <div class="countdown__num" id="cdMins">—</div>
+              <div class="countdown__label">мин</div>
+            </div>
+          </div>
+
+          <div class="hero__orn hero__orn--bottom"></div>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero-slider" data-slider>
+            <div class="hero-slider__viewport">
+              <div class="hero-slider__track" data-track>
+                <div class="hero-slide" data-slide>
+                  <img src="./assets/IMG_20260302_142627_895.jpg.jpeg" alt="Фото 1" loading="lazy" />
+                </div>
+                <div class="hero-slide" data-slide>
+                  <img src="./assets/IMG_20260302_142637_535.jpg.jpeg" alt="Фото 2" loading="lazy" />
+                </div>
+                <div class="hero-slide" data-slide>
+                  <img src="./assets/img1.jpeg" alt="Фото 3" loading="lazy" />
+                </div>
+                <div class="hero-slide" data-slide>
+                  <img src="./assets/img2.jpeg" alt="Фото 4" loading="lazy" />
+                </div>
+                <div class="hero-slide" data-slide>
+                  <img src="./assets/img3.jpeg" alt="Фото 5" loading="lazy" />
+                </div>
+              </div>
+            </div>
+
+            <button class="hero-slider__btn hero-slider__btn--prev" type="button" aria-label="Предыдущее фото" data-prev>‹</button>
+            <button class="hero-slider__btn hero-slider__btn--next" type="button" aria-label="Следующее фото" data-next>›</button>
+
+            <div class="hero-slider__dots" data-dots aria-label="Переключение фото"></div>
+          </div>
+
+          <div class="hero-media__hint">Фото пары</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="invite">
+      <div class="container">
+        <div class="invite-card">
+          <div class="invite-card__inner">
+            <p>Дорогие родные и друзья!</p>
+
+            <p class="invite-card__sp">
+              Мы будем счастливы разделить с вами один из самых важных дней в нашей жизни —
+              день создания нашей семьи.
+            </p>
+
+            <p class="invite-card__sp">
+              <b>Ждём вас 8 мая 2026 года в 16:00</b><br />
+              г. Токмок, Ресторан «Караван-Сарай»<br />
+              ул. Береговая, 3А
+            </p>
+
+            <p class="invite-card__sp">
+              Приходите с хорошим настроением — остальное мы берём на себя.
+            </p>
+
+            <p class="invite-card__sp">
+              Пожалуйста, подтвердите присутствие нажатием на кнопку “Ответить”.
+            </p>
+          </div>
+
+          <div class="invite-card__actions">
+            <a class="btn btn--primary" id="rsvpInvite" href="#">Ответить</a>
+            <a class="btn btn--ghost" href="https://go.2gis.com/IYwZq" target="_blank" rel="noreferrer">Открыть 2GIS</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="details">
+      <div class="container">
+        <h2 class="section__title">Детали</h2>
+        <p class="section__desc">Для удобства — вся информация в одном месте.</p>
+
+        <div class="cards">
+          <div class="card">
+            <div class="card__title">Дата</div>
+            <div class="card__text">8 мая 2026</div>
+          </div>
+
+          <div class="card">
+            <div class="card__title">Время</div>
+            <div class="card__text">16:00</div>
+          </div>
+
+          <div class="card">
+            <div class="card__title">Город</div>
+            <div class="card__text">Токмок</div>
+          </div>
+
+          <div class="card">
+            <div class="card__title">Место</div>
+            <div class="card__text">Ресторан «Караван-Сарай»</div>
+          </div>
+
+          <div class="card">
+            <div class="card__title">Адрес</div>
+            <div class="card__text">ул. Береговая, 3А</div>
+          </div>
+
+          <div class="card">
+            <div class="card__title">Карта</div>
+            <div class="card__text">
+              <a class="inline-link" href="https://go.2gis.com/IYwZq" target="_blank" rel="noreferrer">Открыть в 2GIS</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-box">
+          <div class="cta-box__text">Подтвердите присутствие</div>
+          <a class="btn btn--primary" id="rsvpDetails" href="#">Ответить</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="location">
+      <div class="container">
+        <h2 class="section__title">Локация</h2>
+
+        <div class="loc">
+          <div class="loc__info">
+            <div class="loc__title">Ресторан «Караван-Сарай»</div>
+            <div class="loc__text">
+              г. Токмок<br />
+              ул. Береговая, 3А
+            </div>
+
+            <a class="btn btn--ghost" id="mapLink" target="_blank" rel="noreferrer" href="https://go.2gis.com/IYwZq">
+              Открыть в 2GIS
+            </a>
+
+            <div class="mini-note">
+              По кнопке “Ответить” откроется WhatsApp с готовым сообщением.
+            </div>
+          </div>
+
+          <div class="loc__map map-mini">
+            <iframe
+              title="Карта (мини)"
+              loading="lazy"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=75.27977%2C42.849013%2C75.29977%2C42.861013&layer=mapnik&marker=42.855013%2C75.28977">
+            </iframe>
+
+            <a class="map-mini__cta" href="https://go.2gis.com/IYwZq" target="_blank" rel="noreferrer">
+              Открыть в 2GIS
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-cta">
+          <div class="footer-cta__title">Будем рады видеть вас!</div>
+          <a class="btn btn--primary" id="rsvpBottom" href="#">Ответить на приглашение</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">© <span id="year"></span> Свадебное приглашение</div>
+      <div class="footer__right">Токмок · Караван-Сарай</div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
