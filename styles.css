@@ -79,17 +79,6 @@ body::after{
   overflow: hidden;
 }
 
-.bg-roses::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-
-  /* мягкая “бумажная вуаль” — центр светлее, края чуть темнее */
-  background:
-    radial-gradient(900px 560px at 50% 28%, rgba(255,255,255,.72), rgba(255,255,255,.26) 60%, rgba(255,255,255,.40) 100%),
-    linear-gradient(180deg, rgba(255,255,255,.28), rgba(255,255,255,.08) 40%, rgba(255,255,255,.22));
-}
 
 
 /* mobile */
@@ -97,7 +86,7 @@ body::after{
   .bg-roses{
     background-image: url("./assets/Roses.png");
     background-size: min(820px, 110vw) auto;
-    opacity: .26;
+    opacity: .34;
   }
 }
 
@@ -110,7 +99,7 @@ body::after{
     /* чуть крупнее, чтобы лучше "заполняло" */
     background-size: 108% auto;
 
-    opacity: .20;
+    opacity: .26;
   }
 }
 
@@ -119,7 +108,7 @@ body::after{
   .bg-roses{
     background-position: center 68px;
     background-size: 104% auto;
-    opacity: .18;
+    opacity: .22;
   }
 }
 
@@ -156,7 +145,7 @@ body::after{
 .section__title,
 .loc__title{
   color: rgba(27,43,75,.98);
-  text-shadow: 0 1px 0 rgba(255,255,255,.90);
+  text-shadow: 0 1px 0 rgba(255,255,255,.93);
 }
 
 /* кнопки/метки оставляем как есть */
@@ -172,7 +161,7 @@ main::before{
   inset:-60px 0 -60px 0;
   pointer-events:none;
   z-index:-1;
-  opacity:.18;
+  opacity: .22;
 
   background:
     radial-gradient(circle at 12% 18%, rgba(200,163,90,.55) 0 1px, transparent 2px),
@@ -216,10 +205,14 @@ main::before{
   letter-spacing: .3px;
 }
 .brand__mark{
-  width:12px;height:12px;border-radius:999px;
-  background: radial-gradient(circle at 35% 30%, #fff, var(--gold));
-  box-shadow: 0 10px 22px rgba(200,163,90,.28);
-  border: 1px solid rgba(200,163,90,.45);
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px; /* мягкая форма вместо точки */
+  background: url("./assets/rings.png") center / contain no-repeat;
+  box-shadow: 0 10px 22px rgba(200,163,90,.22);
+  border: 0;
+  flex: 0 0 auto;
 }
 .brand__text{ color: var(--navy); }
 
@@ -268,7 +261,7 @@ main::before{
 }
 
 .btn--ghost{
-  background: rgba(255,255,255,.88);
+  background: rgba(255,255,255,.92);
 }
 .btn--ghost:hover{
   background: rgba(27,43,75,.06);
@@ -296,7 +289,7 @@ main::before{
   background:
     radial-gradient(700px 260px at 25% 0%, rgba(27,43,75,.08), transparent 60%),
     radial-gradient(700px 260px at 85% 0%, rgba(200,163,90,.10), transparent 60%),
-    rgba(255,255,255,.88);
+    rgba(255,255,255,.92);
   border: 1px solid rgba(200,163,90,.28);
   box-shadow: var(--shadow);
   padding: 22px 22px 18px;
@@ -392,7 +385,7 @@ main::before{
 .hero__dateBox{
   border-radius: 16px;
   border: 1px solid rgba(200,163,90,.35);
-  background: rgba(255,255,255,.90);
+  background: rgba(255,255,255,.93);
   padding: 14px 14px 12px;
   text-align:center;
 }
@@ -456,7 +449,7 @@ main::before{
   width: 92px;
   padding: 12px 10px;
   border-radius: 16px;
-  background: rgba(255,255,255,.88);
+  background: rgba(255,255,255,.92);
   border: 1px solid rgba(200,163,90,.22);
   text-align:center;
 }
@@ -549,7 +542,7 @@ main::before{
 .hero-dot{
   width: 8px; height: 8px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.90);
+  border: 1px solid rgba(255,255,255,.93);
   background: rgba(200,163,90,.45);
   cursor:pointer;
 }
@@ -589,7 +582,7 @@ main::before{
   background:
     radial-gradient(700px 260px at 20% 0%, rgba(27,43,75,.07), transparent 60%),
     radial-gradient(700px 260px at 80% 0%, rgba(200,163,90,.10), transparent 60%),
-    rgba(255,255,255,.90);
+    rgba(255,255,255,.93);
   box-shadow: var(--shadow);
   padding: 18px;
 }
@@ -622,7 +615,7 @@ main::before{
   -webkit-backdrop-filter: blur(6px);
 
   border-radius: var(--radius);
-  background: rgba(255,255,255,.90);
+  background: rgba(255,255,255,.93);
   border: 1px solid rgba(200,163,90,.18);
   box-shadow: 0 12px 30px rgba(16, 24, 40, .06);
   padding: 16px;
@@ -652,7 +645,7 @@ main::before{
   gap: 14px;
   padding: 16px;
   border-radius: var(--radius);
-  background: rgba(255,255,255,.88);
+  background: rgba(255,255,255,.92);
   border: 1px solid rgba(200,163,90,.22);
 }
 .cta-box__text{
@@ -674,7 +667,7 @@ main::before{
 
   padding: 16px;
   border-radius: var(--radius);
-  background: rgba(255,255,255,.90);
+  background: rgba(255,255,255,.93);
   border: 1px solid rgba(200,163,90,.18);
   box-shadow: 0 12px 30px rgba(16, 24, 40, .06);
 }
@@ -694,7 +687,7 @@ main::before{
   border-radius: var(--radius);
   border: 1px solid rgba(200,163,90,.18);
   overflow:hidden;
-  background: rgba(255,255,255,.90);
+  background: rgba(255,255,255,.93);
   box-shadow: 0 12px 30px rgba(16, 24, 40, .06);
   min-height: 260px;
   position: relative;
@@ -787,7 +780,7 @@ main::before{
   .invite-card{
     padding: 14px;
     border-radius: 22px;
-    background: rgba(255,255,255,.94);
+    background: rgba(255,255,255,.96);
     border: 1px solid rgba(200,163,90,.30);
     box-shadow: 0 18px 46px rgba(16,24,40,.14);
   }
@@ -797,7 +790,7 @@ main::before{
     border: 1px solid rgba(200,163,90,.22);
     border-radius: 18px;
     padding: 18px 16px;
-    background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.90));
+    background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.93));
     font-size: 18px;
     line-height: 1.75;
     position: relative;

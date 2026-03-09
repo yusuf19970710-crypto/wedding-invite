@@ -18,9 +18,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <!-- Preload backgrounds to reduce flash on refresh -->
+  <!-- Preload images to reduce flash on refresh -->
   <link rel="preload" as="image" href="./assets/Roses-desktop.png" media="(min-width: 981px)">
   <link rel="preload" as="image" href="./assets/Roses.png" media="(max-width: 980px)">
+  <link rel="preload" as="image" href="./assets/rings.png">
 
   <link rel="stylesheet" href="./styles.css" />
 </head>
@@ -31,7 +32,8 @@
   <header class="topbar">
     <div class="container topbar__inner">
       <a class="brand" href="#top" aria-label="Наверх">
-        <span class="brand__mark"></span>
+        <!-- Rings icon -->
+        <img class="brand__mark" src="./assets/rings.png" alt="" />
         <span class="brand__text">Приглашение</span>
       </a>
 
